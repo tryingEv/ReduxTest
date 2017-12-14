@@ -1,0 +1,36 @@
+
+div
+{
+    padding: 20px;
+}
+span
+{
+    /* display: inline-block; */
+    /* height: 30px; */
+    margin: 20px;
+    display: inline-table;
+}
+
+.div-test
+{
+    width: 200px;
+    height: 50px;
+    background: greenyellow;
+    text-align: center;
+    /* vertical-align: middle; */
+}
+
+.btn-changeValue
+{
+    padding: 5px;
+    border-radius: 3px;
+    height: 50px;
+    width: 100px;
+    border: black 1px solid;
+    text-align: center;
+}
+
+.btn-changeValue:active
+{
+    background: grey;
+}
