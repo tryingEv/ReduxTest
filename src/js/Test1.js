@@ -5,27 +5,28 @@ class Test1 extends Component
 {
     static propTypes = 
     {
-        value: PropTypes.number,
-        time: PropTypes.string,
-        callBackVaueChange: PropTypes.func
+        value: PropTypes.number.isRequired,
+        time: PropTypes.string.isRequired,
+        callChangeValue: PropTypes.func.isRequired,
+        callChangeTime: PropTypes.func.isRequired
     }
 
     static defaultProps = 
     {
         value: 0,
         time: "",
-        callBackVaueChange: null
+        callChangeValue: null,
+        callChangeTime: null
     }
 
     render()
     {
-        const {value, time, callBackValueChange} = this.props;
         return (
             <div>
-                <span> count is {value}</span>
-                <span> change count time {time}</span>
-                <span className="btn-changeValue" onClick = {callBackValueChange}>+</span>
-                <div className="div-test">test vertical center</div>
+                <span> Count : {this.props.value}</span>
+                <span> Time : {this.props.time}</span>
+                <span className="btn-change-value" onClick = {this.props.callChangeValue}>+</span>
+                <span className='btn-change-time' onClick = {this.props.callChangeTime}> change time </span>
             </div>
         );
     }
